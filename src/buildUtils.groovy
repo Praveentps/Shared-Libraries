@@ -1,7 +1,13 @@
-ckage org.demo
 
-def timedGradleBuild(tasks) {
-   timestamps {
-      sh "${tool 'gradle3.2'}/bin/gradle ${tasks}"
-   }
+package praveen.com
+
+class buildUtils implements Serializable {
+    def steps
+    buildUtils(steps) { this.steps = steps}
+       def timedGradleBuild(tasks) {
+       def gradleHome = steps.tool 'gradle3.2'
+       steps.timestamps {
+            steps.sh "mvn ${tasks}"
+       }
+    }
 }
