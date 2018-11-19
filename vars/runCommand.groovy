@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
 
-def runCommand(String cmd='echo run command'){
-	echo "write a command to run here"
+def call(String cmd='echo run command'){
+	echo "${cmd}"
 }
