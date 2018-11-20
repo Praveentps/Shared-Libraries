@@ -4,5 +4,4 @@ def call(String cmd='echo run command'){
 
 	echo 'Hello World'
 	echo "${cmd}"
-	/usr/bin/sh "${cmd}"
 }
