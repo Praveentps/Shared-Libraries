@@ -8,3 +8,8 @@ def call(String name = 'human') {
 def getPraveen(){
 return "Praveen"
 }
+
+def getFun(){
+
+  return "Foo"
+}
