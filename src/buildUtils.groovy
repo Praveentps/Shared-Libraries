@@ -15,6 +15,6 @@ class buildUtils implements Serializable {
            anotherFunc()
         }
         def anotherFunc(){
-            steps.sh "Hello from another func"
+            steps.sh "echo Hello from another func"
         }
 }
