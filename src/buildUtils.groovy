@@ -22,8 +22,5 @@ class buildUtils implements Serializable {
         [$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'Please confirm you sure to proceed']
         ])
 
-        if(!userInput) {
-            error "Build wasn't confirmed"
-        }
 
 }
