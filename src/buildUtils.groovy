@@ -9,7 +9,7 @@ class buildUtils implements Serializable {
             steps.sh "mvn ${tasks}"
        }
     }
-        def helloFunc(steps){
+        def helloFunc(){
            print 'Hello'
            steps.sh "echo hello from buildUtils"
         }
