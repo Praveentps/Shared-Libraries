@@ -13,6 +13,14 @@ class buildUtils implements Serializable {
            print 'Hello'
            steps.sh "echo hello from buildUtils"
            anotherFunc()
+           def userInput = input(
+            id: 'userInput', message: 'This is PRODUCTION!', parameters: [
+            [$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'Please confirm you sure to proceed']
+        ])
+
+        if(!userInput) {
+            error "Build wasn't confirmed"
+        }
         }
         def anotherFunc(){
             steps.sh "echo Hello from another func"
