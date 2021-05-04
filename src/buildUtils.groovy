@@ -21,7 +21,7 @@ class buildUtils implements Serializable {
 
         def verify() {
             steps.stage('Verify') {
-                def userInput = input(
+                def userInput = steps.input(
                     id: 'userInput', message: 'This is PRODUCTION!', parameters: [
                     [$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'Please confirm you sure to proceed']
                 ])
